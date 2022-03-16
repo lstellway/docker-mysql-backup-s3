@@ -1,5 +1,9 @@
 # Backup MySQL Database(s) to S3 Bucket
 
+```sh
+docker pull lstellway/mysql-backup-s3
+```
+
 ## Environment Variables
 
 -   `BACKUP_DATABASES`
@@ -42,3 +46,9 @@ It is recommended to create a MySQL user that only has read permissions on your 
 CREATE USER '{{DB_USER}}'@'%' IDENTIFIED BY '{{DB_PASS}}';
 GRANT LOCK TABLES, SELECT ON {{DB_NAME}}.* TO '{{DB_USER}}'@'%';
 ```
+
+## Resources
+
+-   [GitHub Repository](https://github.com/lstellway/docker-mysql-backup-s3)
+-   [Docker Hub Image](https://hub.docker.com/repository/docker/lstellway/mysql-backup-s3)
+-   [Issues](https://github.com/lstellway/docker-mysql-backup-s3/issues)
